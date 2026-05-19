@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>就業規則コンサルヒアリングシート2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "MS Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+    font-size: 10.5pt;
+    color: #000;
+    background: #fff;
+    padding: 10px;
+  }
+  .page {
+    width: 210mm;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 15mm 15mm 15mm 15mm;
+  }
+
+  /* タイトル */
+  h1.main-title {
+    text-align: center;
+    font-size: 16pt;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 9pt;
+    color: #444;
+    margin-bottom: 12px;
+  }
+  .client-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid #000;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+    font-size: 10pt;
+  }
+  .client-header .field { min-width: 200px; }
+  .client-header .field span { display: inline-block; border-bottom: 1px solid #555; min-width: 150px; }
+
+  /* セクション */
+  .section {
+    border: 1.5px solid #333;
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+  }
+  .section-title {
+    background: #222;
+    color: #fff;
+    font-weight: bold;
+    font-size: 10.5pt;
+    padding: 3px 8px;
+    letter-spacing: 0.5px;
+  }
+  .section-body {
+    padding: 7px 10px;
+  }
+  .subsection-title {
+    font-weight: bold;
+    font-size: 10pt;
+    background: #eee;
+    padding: 2px 6px;
+    margin: 6px 0 4px 0;
+    border-left: 4px solid #555;
+  }
+
+  /* 社労士メモ（★） — 印刷時は @media print で非表示にする */
+  .memo {
+    background: #fff9c4;
+    border: 1px dashed #e6a800;
+    border-radius: 3px;
+    padding: 3px 8px;
+    font-size: 9pt;
+    color: #7a4f00;
+    margin: 3px 0;
+  }
+  .memo::before { content: "★ "; font-weight: bold; }
+
+  /* 法改正バッジ */
+  .badge-new {
+    display: inline-block;
+    background: #c0392b;
+    color: #fff;
+    font-size: 7.5pt;
+    font-weight: bold;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  .badge-2024 { background: #1a6fa8; }
+  .badge-2025 { background: #c0392b; }
+
+  /* 入力行 */
+  .row { margin: 3px 0; line-height: 1.9; }
+  .input-line {
+    display: inline-block;
+    border-bottom: 1px solid #666;
+    min-width: 120px;
+    vertical-align: bottom;
+  }
+  .input-line-sm { min-width: 60px; }
+  .input-line-md { min-width: 100px; }
+  .input-line-lg { min-width: 180px; }
+  .input-line-xl { min-width: 260px; }
+
+  /* チェックボックス風 */
+  .check-group { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 3px 0; }
+  .check-item { display: inline-flex; align-items: center; gap: 4px; }
+  .checkbox {
+    width: 13px; height: 13px;
+    border: 1.5px solid #333;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  /* グリッドレイアウト */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px 10px; }
+
+  /* トラブル事例欄 */
+  .trouble-box {
+    border: 1px solid #aaa;
+    min-height: 36px;
+    padding: 4px 6px;
+    margin: 3px 0;
+    font-size: 9.5pt;
+    background: #fafafa;
+  }
+  .trouble-box::before { content: attr(data-label); color: #555; font-size: 9pt; }
+
+  /* 注釈 */
+  .note { font-size: 8.5pt; color: #555; margin: 2px 0 2px 8px; }
+
+  /* テーブル */
+  table.form-table { width: 100%; border-collapse: collapse; margin: 4px 0; font-size: 10pt; }
+  table.form-table td { border: 1px solid #bbb; padding: 3px 6px; }
+  table.form-table th { border: 1px solid #bbb; padding: 3px 6px; background: #ddd; font-weight: bold; text-align: center; }
+
+  /* ページ区切り */
+  .page-break { page-break-before: always; }
+
+  /* 印刷時: ★メモ欄を非表示 */
+  @media print {
+    .memo { display: none !important; }
+    body { padding: 0; }
+    .page { padding: 12mm 12mm; }
+    .section { page-break-inside: avoid; }
+  }
+
+  /* 印刷プレビュー用ヘルプテキスト */
+  .print-note {
+    text-align: center;
+    font-size: 9pt;
+    color: #888;
+    margin-bottom: 10px;
+    border: 1px dashed #ccc;
+    padding: 4px;
+  }
+  @media print { .print-note { display: none; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+<p class="print-note">※ 印刷時は「★社労士メモ」が自動で非表示になります。Ctrl+P（Mac: ⌘+P）で印刷してください。</p>
+
+<h1 class="main-title">就業規則コンサルヒアリングシート 2026</h1>
+<p class="subtitle">2024年・2025年 法改正対応版　／　★印は社労士メモ（顧客へ渡す際は印刷してください）</p>
+
+<div class="client-header">
+  <div class="field">会社名：<span class="input-line input-line-xl"></span></div>
+  <div class="field">担当社労士：<span class="input-line input-line-md"></span></div>
+  <div class="field">ヒアリング日：<span class="input-line input-line-md"></span></div>
+</div>
+
+
+<!-- =========================================
+     1. 就業規則作成の背景
+     ========================================= -->
+<div class="section">
+  <div class="section-title">1. 就業規則作成の背景・目的</div>
+  <div class="section-body">
+    <div class="memo">作成したい「表向きの理由」と「裏の理由（実際のトラブル・課題）」を分けて把握する。裏の理由が就業規則のコアになる。</div>
+    <div class="row">表向きの理由：<span class="input-line input-line-xl"></span></div>
+    <div class="row">実際の課題・背景：</div>
+    <div class="trouble-box" style="min-height:48px;"></div>
+    <div class="row">以前の就業規則　<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（最終改定：<span class="input-line input-line-sm"></span>年頃）</span></div>
+    <div class="memo">既存の就業規則がある場合は、現行規則のどこが機能していないかを確認。古いまま放置されているケースが多い。</div>
+  </div>
+</div>
+
+
+<!-- =========================================
+     2. 会社概要
+     ========================================= -->
+<div class="section">
+  <div class="section-title">2. 会社概要</div>
+  <div class="section-body">
+    <div class="grid-2">
+      <div class="row">会社設立：<span class="input-line input-line-sm"></span>年　<span class="input-line input-line-sm"></span>月</div>
+      <div class="row">業種・業態：<span class="input-line input-line-md"></span></div>
+      <div class="row">資本金：<span class="input-line input-line-md"></span>万円</div>
+      <div class="row">本社所在地：<span class="input-line input-line-md"></span></div>
+    </div>
+
+    <div class="subsection-title">雇用状況（おおよその数字でOK）</div>
+    <div class="memo">無理に全員分を確認しなくてよい。規模によって就業規則の義務（10人以上）・育児介護公表義務（300人超）が変わるため総数だけは必ず確認。</div>
+    <table class="form-table">
+      <tr>
+        <th>区分</th><th>役員</th><th>正社員</th><th>契約社員</th><th>パートタイマー</th><th>嘱託</th><th>アルバイト</th><th>派遣社員</th><th>合計</th>
+      </tr>
+      <tr>
+        <td style="text-align:center">人数</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+    </table>
+    <div class="note">※常時使用する労働者が10人以上で就業規則の届出義務あり（労基法89条）</div>
+
+    <div class="grid-2" style="margin-top:6px;">
+      <div>
+        <div class="subsection-title">性別</div>
+        <div class="row">男性：<span class="input-line input-line-sm"></span>人　女性：<span class="input-line input-line-sm"></span>人</div>
+      </div>
+      <div>
+        <div class="subsection-title">年齢層</div>
+        <div class="row">20代：<span class="input-line input-line-sm"></span>　30代：<span class="input-line input-line-sm"></span>　40代：<span class="input-line input-line-sm"></span>　50代：<span class="input-line input-line-sm"></span>　60代以上：<span class="input-line input-line-sm"></span></div>
+      </div>
+    </div>
+
+    <div class="subsection-title">職種構成</div>
+    <div class="row">
+      営業：<span class="input-line input-line-sm"></span>人
+      事務：<span class="input-line input-line-sm"></span>人
+      技術・SE：<span class="input-line input-line-sm"></span>人
+      製造・現場：<span class="input-line input-line-sm"></span>人
+      その他（<span class="input-line input-line-sm"></span>）：<span class="input-line input-line-sm"></span>人
+    </div>
+
+    <div class="subsection-title">勤務地・テレワーク</div>
+    <div class="row">
+      在宅勤務・テレワーク：
+      <span class="check-item"><span class="checkbox"></span>無</span>
+      <span class="check-item"><span class="checkbox"></span>有（<span class="check-item"><span class="checkbox"></span>全員可　<span class="check-item"><span class="checkbox"></span>限定：<span class="input-line input-line-md"></span></span>）</span>
+    </div>
+    <div class="row">
+      関連会社・グループ会社出向：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（<span class="input-line input-line-md"></span>）</span>
+    </div>
+    <div class="row">
+      外国人労働者：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（在留資格：<span class="input-line input-line-md"></span>）</span>
+    </div>
+    <div class="memo">テレワーク規程・在宅勤務規程を別途作成するか確認。外国人がいる場合は多言語対応や就労可能な業務範囲も確認。</div>
+
+    <div class="subsection-title">障害者雇用 <span class="badge-new badge-2024">2024年改正</span></div>
+    <div class="row">
+      障害者雇用：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（身体：<span class="input-line input-line-sm"></span>人　知的：<span class="input-line input-line-sm"></span>人　精神：<span class="input-line input-line-sm"></span>人）</span>
+    </div>
+    <div class="note">※法定雇用率：2024年4月〜2.5%、2026年7月〜2.7%（常用労働者40人以上で義務）</div>
+  </div>
+</div>
+
+
+<!-- =========================================
+     3. 採用・入社手続き
+     ========================================= -->
+<div class="section">
+  <div class="section-title">3. 採用・入社手続き</div>
+  <div class="section-body">
+    <div class="subsection-title">入社時の提出書類</div>
+    <div class="memo">身元保証書の有無と更新管理を確認。身元保証法改正（2020年）で期間上限5年。</div>
+    <div class="check-group">
+      <span class="check-item"><span class="checkbox"></span>マイナンバー</span>
+      <span class="check-item"><span class="checkbox"></span>住民票記載事項証明書</span>
+      <span class="check-item"><span class="checkbox"></span>扶養控除等申告書</span>
+      <span class="check-item"><span class="checkbox"></span>誓約書（秘密保持・競業避止）</span>
+      <span class="check-item"><span class="checkbox"></span>身元保証書</span>
+      <span class="check-item"><span class="checkbox"></span>源泉徴収票</span>
+      <span class="check-item"><span class="checkbox"></span>資格証明書</span>
+      <span class="check-item"><span class="checkbox"></span>自動車免許証</span>
+      <span class="check-item"><span class="checkbox"></span>給与振込口座</span>
+      <span class="check-item"><span class="checkbox"></span>その他：<span class="input-line input-line-md"></span></span>
+    </div>
+
+    <div class="subsection-title">試用期間・有期契約 <span class="badge-new badge-2024">2024年4月 明示ルール改正</span></div>
+    <div class="memo">試用期間≠有期契約の違いを必ず説明。2024年4月から「就業場所・業務の変更範囲」「有期契約の更新上限・無期転換申込機会」の明示が義務化。</div>
+    <div class="row">
+      試用期間：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（<span class="input-line input-line-sm"></span>か月）</span>
+      &emsp;
+      有期契約期間：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（<span class="input-line input-line-sm"></span>か月）</span>
+    </div>
+    <div class="row">
+      有期契約の更新上限：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（上限回数：<span class="input-line input-line-sm"></span>回 / <span class="input-line input-line-sm"></span>年）</span>
+    </div>
+    <div class="row">
+      無期転換ルール（5年超）の対象者：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（<span class="input-line input-line-sm"></span>人）</span>
+    </div>
+    <div class="note">※無期転換申込機会・転換後の労働条件を就業規則に明記する必要あり</div>
+
+    <div class="subsection-title">同一労働同一賃金チェック <span class="badge-new badge-2024">確認必須</span></div>
+    <div class="memo">正社員とパート・有期社員の待遇差の説明義務（パートタイム・有期雇用労働法）。各手当の支給根拠が説明できるか確認。</div>
+    <div class="row">
+      正規・非正規の待遇差の合理的説明：<span class="check-item"><span class="checkbox"></span>できる</span>　<span class="check-item"><span class="checkbox"></span>要検討</span>　<span class="check-item"><span class="checkbox"></span>未整備</span>
+    </div>
+    <div class="row">課題・コメント：<span class="input-line input-line-xl"></span></div>
+  </div>
+</div>
+
+
+<!-- =========================================
+     4. 労働時間・休憩
+     ========================================= -->
+<div class="section">
+  <div class="section-title">4. 労働時間・休憩</div>
+  <div class="section-body">
+    <div class="subsection-title">労働時間制の種類</div>
+    <div class="check-group">
+      <span class="check-item"><span class="checkbox"></span>通常の労働時間制（固定）</span>
+      <span class="check-item"><span class="checkbox"></span>1か月単位変形労働時間制</span>
+      <span class="check-item"><span class="checkbox"></span>1年単位変形労働時間制</span>
+      <span class="check-item"><span class="checkbox"></span>フレックスタイム制</span>
+      <span class="check-item"><span class="checkbox"></span>事業場外みなし労働時間制</span>
+      <span class="check-item"><span class="checkbox"></span>裁量労働制（専門型・企画型）</span>
+    </div>
+    <div class="memo">変形労働・フレックスは労使協定が必要。裁量労働は要件が厳格。自社の実態に合った制度か確認する。</div>
+
+    <div class="subsection-title">通常（固定時間）</div>
+    <div class="row">始業（<span class="input-line input-line-sm"></span>時<span class="input-line input-line-sm"></span>分）　終業（<span class="input-line input-line-sm"></span>時<span class="input-line input-line-sm"></span>分）</div>
+
+    <div class="subsection-title">シフト制</div>
+    <div class="memo">シフト表の有無、いつシフトを確定するかを確認。直前変更ルールも規定に入れるか検討。</div>
+    <table class="form-table">
+      <tr><th>パターン</th><th>始業</th><th>終業</th><th>備考</th></tr>
+      <tr><td>A</td><td>　　時　　分</td><td>　　時　　分</td><td></td></tr>
+      <tr><td>B</td><td>　　時　　分</td><td>　　時　　分</td><td></td></tr>
+      <tr><td>C</td><td>　　時　　分</td><td>　　時　　分</td><td></td></tr>
+      <tr><td>D</td><td>　　時　　分</td><td>　　時　　分</td><td></td></tr>
+    </table>
+
+    <div class="subsection-title">休憩時間</div>
+    <div class="memo">残業が多い会社では休憩時間で法定時間（6h超→45分、8h超→60分）を満たすよう調整することがある。</div>
+    <div class="row">
+      （<span class="input-line input-line-sm"></span>時<span class="input-line input-line-sm"></span>分〜<span class="input-line input-line-sm"></span>時<span class="input-line input-line-sm"></span>分）
+      （<span class="input-line input-line-sm"></span>時<span class="input-line input-line-sm"></span>分〜<span class="input-line input-line-sm"></span>時<span class="input-line input-line-sm"></span>分）
+      合計（<span class="input-line input-line-sm"></span>）分
+    </div>
+
+    <div class="subsection-title">出退勤管理</div>
+    <div class="row">
+      管理方法：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>出勤簿</span>　<span class="check-item"><span class="checkbox"></span>タイムカード</span>　<span class="check-item"><span class="checkbox"></span>ICカード</span>　<span class="check-item"><span class="checkbox"></span>勤怠システム（<span class="input-line input-line-md"></span>）</span>
+    </div>
+    <div class="row">
+      欠勤・遅刻・早退の連絡方法：<span class="check-item"><span class="checkbox"></span>電話</span>　<span class="check-item"><span class="checkbox"></span>メール</span>　<span class="check-item"><span class="checkbox"></span>取得届</span>　<span class="check-item"><span class="checkbox"></span>その他：<span class="input-line input-line-md"></span></span>
+    </div>
+
+    <div class="subsection-title">時間外・休日・深夜労働</div>
+    <div class="row">
+      残業：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+      深夜業務（22時〜5時）：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+      休日業務：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+    </div>
+    <div class="row">
+      36協定 締結：<span class="check-item"><span class="checkbox"></span>済</span>　<span class="check-item"><span class="checkbox"></span>未締結</span>
+      特別条項：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+      月の上限残業時間：<span class="input-line input-line-sm"></span>時間
+    </div>
+    <div class="note">※時間外上限規制：月45h・年360h、特別条項でも月100h未満・年720h以内（労基法36条）</div>
+    <div class="row">※残業代・残業時間に関する過去のトラブル</div>
+    <div class="trouble-box" data-label=""></div>
+  </div>
+</div>
+
+
+<!-- =========================================
+     5. 休日・休暇
+     ========================================= -->
+<div class="section">
+  <div class="section-title">5. 休日・休暇</div>
+  <div class="section-body">
+    <div class="subsection-title">休日</div>
+    <div class="memo">年間カレンダーを作成・添付する。週1日以上の法定休日を確認。</div>
+    <div class="row">
+      定休日：<span class="check-group">
+        <span class="check-item"><span class="checkbox"></span>月</span>
+        <span class="check-item"><span class="checkbox"></span>火</span>
+        <span class="check-item"><span class="checkbox"></span>水</span>
+        <span class="check-item"><span class="checkbox"></span>木</span>
+        <span class="check-item"><span class="checkbox"></span>金</span>
+        <span class="check-item"><span class="checkbox"></span>土</span>
+        <span class="check-item"><span class="checkbox"></span>日</span>
+        <span class="check-item"><span class="checkbox"></span>祝日</span>
+      </span>
+    </div>
+    <div class="row">
+      夏季：<span class="input-line input-line-sm"></span>日間
+      GW：<span class="input-line input-line-sm"></span>日間
+      年末年始：<span class="input-line input-line-sm"></span>日間
+      年間休日計：<span class="input-line input-line-sm"></span>日
+    </div>
+    <div class="row">シフト制（週休<span class="input-line input-line-sm"></span>日）※特定の曜日が決まっていない場合</div>
+
+    <div class="subsection-title">年次有給休暇 <span class="badge-new">5日取得義務</span></div>
+    <div class="memo">年5日の取得義務（労基法39条7項）を知っているか確認。管理簿の整備状況も確認。</div>
+    <div class="row">
+      一斉付与制度：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+      半日単位：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+      時間単位：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>（最大<span class="input-line input-line-sm"></span>日分）
+    </div>
+    <div class="row">
+      届出期限：取得予定日の<span class="input-line input-line-sm"></span>日以上前
+      届出方法：<span class="check-item"><span class="checkbox"></span>メール</span>　<span class="check-item"><span class="checkbox"></span>取得届</span>　<span class="check-item"><span class="checkbox"></span>システム</span>　<span class="check-item"><span class="checkbox"></span>口頭</span>
+    </div>
+    <div class="row">有給休暇管理簿：<span class="check-item"><span class="checkbox"></span>整備済</span>　<span class="check-item"><span class="checkbox"></span>未整備</span></div>
+    <div class="row">※有給休暇に関する過去のトラブル</div>
+    <div class="trouble-box" data-label=""></div>
+
+    <div class="subsection-title">特別休暇</div>
+    <div class="row">
+      <span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有</span>
+    </div>
+    <table class="form-table" style="margin-top:4px;">
+      <tr><th>種別</th><th>日数</th><th>有給/無給</th><th>備考</th></tr>
+      <tr><td>慶弔休暇（結婚・忌引）</td><td></td><td></td><td></td></tr>
+      <tr><td>生理休暇</td><td>必要日数</td><td>無給</td><td>（法定）</td></tr>
+      <tr><td>裁判員休暇</td><td></td><td></td><td></td></tr>
+      <tr><td>ボランティア休暇</td><td></td><td></td><td></td></tr>
+      <tr><td>その他（<span class="input-line input-line-md"></span>）</td><td></td><td></td><td></td></tr>
+    </table>
+
+    <div class="subsection-title">育児・介護休業 <span class="badge-new badge-2025">2025年4月改正</span></div>
+    <div class="memo">2025年4月施行の改正育児介護休業法：①子の看護休暇の対象拡大（小学校3年生修了まで）・事由拡大、②所定外労働免除の対象拡大（3歳→小学校就学前）、③育児休業の柔軟化。300人超の企業は育児休業取得率の公表義務あり。</div>
+    <div class="row">
+      産後パパ育休（出生時育児休業）の実績：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+      育児休業（通常）の実績：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+    </div>
+    <div class="row">
+      介護休業の実績：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+      子の看護休暇の実績：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+    </div>
+    <div class="row">
+      育児休業取得率の公表（300人超）：<span class="check-item"><span class="checkbox"></span>対象外</span>　<span class="check-item"><span class="checkbox"></span>公表済</span>　<span class="check-item"><span class="checkbox"></span>未対応</span>
+    </div>
+    <div class="row">育休・介護休業に関する規程の整備：<span class="check-item"><span class="checkbox"></span>整備済</span>　<span class="check-item"><span class="checkbox"></span>未整備</span>　<span class="check-item"><span class="checkbox"></span>要更新</span></div>
+
+    <div class="subsection-title">休職制度</div>
+    <div class="memo">メンタルヘルス不調による休職が増加。復職手続き・リハビリ勤務・自然退職の条件を明確にする。</div>
+    <div class="row">
+      休職制度：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有</span>（傷病：<span class="input-line input-line-sm"></span>か月、その他：<span class="input-line input-line-md"></span>）
+    </div>
+    <div class="row">※メンタルヘルス・長期療養に関する過去のトラブル</div>
+    <div class="trouble-box" data-label=""></div>
+  </div>
+</div>
+
+
+<!-- =========================================
+     6. 賃金・退職
+     ========================================= -->
+<div class="section">
+  <div class="section-title">6. 賃金・退職金・定年</div>
+  <div class="section-body">
+
+    <div class="subsection-title">正社員・契約社員の賃金</div>
+    <div class="row">基本給：月給（<span class="input-line input-line-md"></span>円〜<span class="input-line input-line-md"></span>円）　日給（<span class="input-line input-line-md"></span>円〜<span class="input-line input-line-md"></span>円）</div>
+    <table class="form-table" style="margin-top:4px;">
+      <tr><th>手当名</th><th>金額（円）</th><th>支給条件・備考</th></tr>
+      <tr><td>　　　　　　手当</td><td></td><td></td></tr>
+      <tr><td>　　　　　　手当</td><td></td><td></td></tr>
+      <tr><td>　　　　　　手当</td><td></td><td></td></tr>
+      <tr><td>　　　　　　手当</td><td></td><td></td></tr>
+      <tr><td>通勤交通費</td><td>上限　　　　　円</td><td><span class="check-item"><span class="checkbox"></span>実費</span>　<span class="check-item"><span class="checkbox"></span>定額</span></td></tr>
+    </table>
+    <div class="row">
+      歩合給：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（計算書を従業員に公開：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>）</span>
+    </div>
+
+    <div class="subsection-title">パート・アルバイトの賃金</div>
+    <div class="row">
+      時給：<span class="input-line input-line-md"></span>円〜<span class="input-line input-line-md"></span>円
+      通勤交通費：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（上限<span class="input-line input-line-sm"></span>円）</span>
+    </div>
+    <div class="note">※地域別最低賃金（2025年度見込み）を必ず確認。全国加重平均1,000円超が目安。</div>
+
+    <div class="subsection-title">共通事項</div>
+    <div class="row">
+      賃金締切日・支払日：毎月<span class="input-line input-line-sm"></span>日締切、<span class="input-line input-line-sm"></span>日払（<span class="check-item"><span class="checkbox"></span>当月</span>　<span class="check-item"><span class="checkbox"></span>翌月</span>　<span class="check-item"><span class="checkbox"></span>翌々月</span>）
+    </div>
+    <div class="row">
+      銀行休日時の支払日：<span class="check-item"><span class="checkbox"></span>前日</span>　<span class="check-item"><span class="checkbox"></span>翌日</span>
+      支払方法：<span class="check-item"><span class="checkbox"></span>銀行振込</span>　<span class="check-item"><span class="checkbox"></span>現金払</span>
+    </div>
+    <div class="row">
+      税・社保以外の控除：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（<span class="input-line input-line-lg"></span>）</span>
+    </div>
+    <div class="row">
+      昇給：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（年<span class="input-line input-line-sm"></span>回、<span class="input-line input-line-sm"></span>月）</span>
+      賞与：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（<span class="input-line input-line-sm"></span>月・<span class="input-line input-line-sm"></span>月・<span class="input-line input-line-sm"></span>月）</span>
+    </div>
+
+    <div class="subsection-title">退職金・定年</div>
+    <div class="row">
+      退職金：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（<span class="check-item"><span class="checkbox"></span>中退共</span>　<span class="check-item"><span class="checkbox"></span>生命保険</span>　<span class="check-item"><span class="checkbox"></span>確定拠出年金（iDeCo企業型）</span>　<span class="check-item"><span class="checkbox"></span>その他：<span class="input-line input-line-md"></span>）</span>
+    </div>
+    <div class="row">
+      定年：<span class="check-item"><span class="checkbox"></span>有（<span class="input-line input-line-sm"></span>歳）</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+      継続雇用制度：<span class="check-item"><span class="checkbox"></span>有（<span class="input-line input-line-sm"></span>歳まで）</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+    </div>
+    <div class="row">65歳超雇用推進（70歳就業確保）：<span class="check-item"><span class="checkbox"></span>対応済</span>　<span class="check-item"><span class="checkbox"></span>検討中</span>　<span class="check-item"><span class="checkbox"></span>予定なし</span></div>
+    <div class="note">※高年齢者雇用安定法：65歳までは雇用確保義務、70歳までは就業確保努力義務（2021年〜）</div>
+
+    <div class="subsection-title">退職手続き</div>
+    <div class="row">
+      自己都合退職の届出期限：退職する<span class="input-line input-line-sm"></span>日（または<span class="input-line input-line-sm"></span>か月）以上前に届出
+    </div>
+    <div class="memo">民法では2週間前が原則。就業規則での延長は1か月程度が多い。長すぎると無効になるリスクあり。</div>
+    <div class="row">※退職に関する過去のトラブル（入社時：<span class="input-line input-line-xl"></span>）</div>
+    <div class="row">（退社時：<span class="input-line input-line-xl"></span>）</div>
+  </div>
+</div>
+
+
+<!-- =========================================
+     7. 社会保険・福利厚生
+     ========================================= -->
+<div class="section">
+  <div class="section-title">7. 社会保険・福利厚生</div>
+  <div class="section-body">
+    <div class="row">
+      社会保険（厚生年金・健康保険）加入：<span class="check-item"><span class="checkbox"></span>全員加入済</span>　<span class="check-item"><span class="checkbox"></span>未加入者あり（<span class="input-line input-line-sm"></span>人）</span>
+    </div>
+    <div class="row">
+      雇用保険加入：<span class="check-item"><span class="checkbox"></span>全員加入済</span>　<span class="check-item"><span class="checkbox"></span>未加入者あり（<span class="input-line input-line-sm"></span>人）</span>
+    </div>
+    <div class="note">※社会保険の適用拡大：2024年10月〜従業員51人以上の企業、2026年10月〜全企業に拡大（短時間労働者）</div>
+    <div class="row">健康診断：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（毎年<span class="input-line input-line-sm"></span>月）</span>　ストレスチェック（50人以上）：<span class="check-item"><span class="checkbox"></span>実施済</span>　<span class="check-item"><span class="checkbox"></span>未実施</span>
+    </div>
+    <div class="row">
+      研修制度：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+      資格取得奨励制度：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+    </div>
+    <div class="row">
+      副業・兼業：<span class="check-item"><span class="checkbox"></span>禁止</span>　<span class="check-item"><span class="checkbox"></span>全員可</span>　<span class="check-item"><span class="checkbox"></span>限定許可（<span class="input-line input-line-md"></span>）</span>
+    </div>
+    <div class="memo">副業容認の場合は「副業・兼業に関するガイドライン（厚労省）」に基づく規定と、労働時間通算の管理方法を検討。</div>
+  </div>
+</div>
+
+
+<!-- =========================================
+     8. 服務規律・ハラスメント・懲戒
+     ========================================= -->
+<div class="section">
+  <div class="section-title">8. 服務規律・ハラスメント・懲戒</div>
+  <div class="section-body">
+    <div class="subsection-title">ハラスメント対策 <span class="badge-new">義務（全企業）</span></div>
+    <div class="memo">パワハラ防止措置は全事業主に義務（2022年4月〜中小企業含む）。相談窓口の設置・周知が必要。</div>
+    <div class="row">
+      相談窓口の設置：<span class="check-item"><span class="checkbox"></span>有（担当：<span class="input-line input-line-md"></span>）</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+    </div>
+    <div class="row">
+      ハラスメント研修の実施：<span class="check-item"><span class="checkbox"></span>定期実施</span>　<span class="check-item"><span class="checkbox"></span>実施済（単発）</span>　<span class="check-item"><span class="checkbox"></span>未実施</span>
+    </div>
+    <div class="row">※ハラスメントの過去のトラブル事例</div>
+    <div class="trouble-box" data-label=""></div>
+
+    <div class="subsection-title">情報セキュリティ・SNS規定</div>
+    <div class="memo">SNS投稿による風評被害・情報漏洩のトラブルが増加。就業規則にSNS利用ルールを明記することを推奨。</div>
+    <div class="row">
+      PC・スマホの貸与：<span class="check-item"><span class="checkbox"></span>有（<span class="check-item"><span class="checkbox"></span>全員</span>　<span class="check-item"><span class="checkbox"></span>限定）</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+    </div>
+    <div class="row">
+      SNS・インターネット利用規定：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無（要作成）</span>
+    </div>
+    <div class="row">
+      秘密保持・競業避止（退職後）：<span class="check-item"><span class="checkbox"></span>誓約書あり</span>　<span class="check-item"><span class="checkbox"></span>規定のみ</span>　<span class="check-item"><span class="checkbox"></span>未対応</span>
+    </div>
+    <div class="row">
+      同業他社への転職制限：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（制限範囲：<span class="input-line input-line-md"></span>）</span>
+    </div>
+    <div class="memo">競業避止条項は「期間・地域・職種の範囲・代償措置」がなければ無効になりやすい。内容を精査する。</div>
+
+    <div class="subsection-title">その他の服務事項</div>
+    <div class="row">
+      社有車の業務使用：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+      マイカー通勤：<span class="check-item"><span class="checkbox"></span>有</span>（駐車場：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>　業務使用：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>）　<span class="check-item"><span class="checkbox"></span>無</span>
+    </div>
+    <div class="row">
+      自転車通勤：<span class="check-item"><span class="checkbox"></span>有</span>（駐輪場：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>　業務使用：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>）　<span class="check-item"><span class="checkbox"></span>無</span>
+    </div>
+    <div class="row">
+      アルコールチェック：<span class="check-item"><span class="checkbox"></span>有（義務対象）</span>　<span class="check-item"><span class="checkbox"></span>有（任意）</span>　<span class="check-item"><span class="checkbox"></span>無</span>
+    </div>
+    <div class="row">
+      出張：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（地域：<span class="input-line input-line-md"></span>　宿泊：<span class="check-item"><span class="checkbox"></span>有</span>　<span class="check-item"><span class="checkbox"></span>無</span>）</span>
+    </div>
+    <div class="row">
+      損害賠償・弁償規定：<span class="check-item"><span class="checkbox"></span>不要</span>　<span class="check-item"><span class="checkbox"></span>要整備（事例：<span class="input-line input-line-md"></span>）</span>
+    </div>
+    <div class="row">解雇した事例：<span class="check-item"><span class="checkbox"></span>無</span>　<span class="check-item"><span class="checkbox"></span>有（時期：<span class="input-line input-line-md"></span>　概要：<span class="input-line input-line-lg"></span>）</span></div>
+  </div>
+</div>
+
+
+<!-- =========================================
+     9. 就業規則の整備状況・届出
+     ========================================= -->
+<div class="section">
+  <div class="section-title">9. 就業規則の整備・届出・周知 <span class="badge-new badge-2024">2024年明示義務確認</span></div>
+  <div class="section-body">
+    <div class="memo">就業規則は常時10人以上で届出義務あり。効力発生には「周知」が不可欠（労基法106条）。届け出ただけでは不十分。</div>
+    <div class="row">
+      就業規則の届出：<span class="check-item"><span class="checkbox"></span>済（最終届出：<span class="input-line input-line-sm"></span>年）</span>　<span class="check-item"><span class="checkbox"></span>未届出</span>　<span class="check-item"><span class="checkbox"></span>届出義務なし（9人以下）</span>
+    </div>
+    <div class="row">
+      周知方法：<span class="check-item"><span class="checkbox"></span>備付け</span>　<span class="check-item"><span class="checkbox"></span>書面交付</span>　<span class="check-item"><span class="checkbox"></span>社内イントラ・共有フォルダ</span>　<span class="check-item"><span class="checkbox"></span>未周知</span>
+    </div>
+    <div class="row">
+      別規程（パート・契約社員用）：<span class="check-item"><span class="checkbox"></span>作成済</span>　<span class="check-item"><span class="checkbox"></span>不要</span>　<span class="check-item"><span class="checkbox"></span>要作成</span>
+    </div>
+    <div class="row">
+      労働者代表の選出・意見書：<span class="check-item"><span class="checkbox"></span>対応済</span>　<span class="check-item"><span class="checkbox"></span>未対応</span>
+    </div>
+    <div class="row">
+      その他付属規程（必要なもの）：
+    </div>
+    <div class="check-group">
+      <span class="check-item"><span class="checkbox"></span>賃金規程</span>
+      <span class="check-item"><span class="checkbox"></span>育児・介護休業規程</span>
+      <span class="check-item"><span class="checkbox"></span>テレワーク規程</span>
+      <span class="check-item"><span class="checkbox"></span>ハラスメント防止規程</span>
+      <span class="check-item"><span class="checkbox"></span>副業・兼業規程</span>
+      <span class="check-item"><span class="checkbox"></span>情報セキュリティ規程</span>
+      <span class="check-item"><span class="checkbox"></span>退職金規程</span>
+      <span class="check-item"><span class="checkbox"></span>その他：<span class="input-line input-line-md"></span></span>
+    </div>
+  </div>
+</div>
+
+
+<!-- =========================================
+     10. 社労士メモ（最終確認）
+     ========================================= -->
+<div class="section">
+  <div class="section-title" style="background:#7a4f00;">10. 社労士メモ（最終確認・提案事項）　※顧客渡し版では非表示</div>
+  <div class="section-body">
+    <div class="memo" style="background:#fff3cd;">優先度高：すぐに対応が必要な事項</div>
+    <div class="trouble-box" style="min-height:50px;" data-label=""></div>
+    <div class="memo" style="background:#d4edda; color: #155724; border-color:#155724;">提案・オプション：追加でご提案できる事項</div>
+    <div class="trouble-box" style="min-height:50px;" data-label=""></div>
+    <div class="row">見積もり目安：就業規則作成（<span class="input-line input-line-md"></span>円）　付属規程（<span class="input-line input-line-sm"></span>円/1本）　次回日程：<span class="input-line input-line-md"></span></div>
+  </div>
+</div>
+
+</div><!-- /page -->
+</body>
+</html>
