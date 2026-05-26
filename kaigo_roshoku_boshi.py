@@ -156,6 +156,83 @@ bullet('上限：1事業主あたり5人まで（同一労働者・同一対象�
 
 heading2('② 介護両立支援制度')
 
+# 導入できる制度の詳細表
+p_intro = doc.add_paragraph()
+r_intro = p_intro.add_run('■ 導入できる制度（5種）と利用要件')
+r_intro.bold = True
+r_intro.font.size = Pt(10.5)
+r_intro.font.color.rgb = RGBColor(0x2E, 0x74, 0xB5)
+p_intro.paragraph_format.space_before = Pt(4)
+p_intro.paragraph_format.space_after = Pt(2)
+
+tbl_sys = doc.add_table(rows=6, cols=3)
+tbl_sys.style = 'Table Grid'
+sys_headers = ['制度名', '内容', '利用要件']
+for i, h in enumerate(sys_headers):
+    cell = tbl_sys.cell(0, i)
+    cell.text = h
+    cell.paragraphs[0].runs[0].bold = True
+    cell.paragraphs[0].runs[0].font.size = Pt(10)
+    set_cell_bg(cell, '2E74B5')
+    cell.paragraphs[0].runs[0].font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
+
+sys_data = [
+    (
+        '時差出勤制度',
+        '1日の所定労働時間を変えずに、始業または終業の時刻を1時間以上繰り上げ・繰り下げる制度',
+        '所定労働日ベースで合計20日間以上の利用実績\n（制度利用開始前1か月間に当該制度を利用していないこと）'
+    ),
+    (
+        '短時間勤務制度\n（介護のため）',
+        '1日の所定労働時間を1時間以上短縮する制度\n（週の一部のみ短縮も可）',
+        '所定労働日ベースで合計20日間以上\n時間当たり基本給等が制度利用前を下回らないこと\n無期雇用労働者が利用中に有期に変更されていないこと'
+    ),
+    (
+        '在宅勤務制度\n（介護のため）',
+        '要介護状態の対象家族を介護しながら就業できるよう、在宅勤務を認める制度',
+        '所定労働日ベースで合計20日間以上\n業務日報等で勤務実態（勤務日・始終業時刻）が確認できること\n制度利用前1か月間に週2割以上または通算5回以上の在宅勤務実績がないこと'
+    ),
+    (
+        'フレックスタイム制度\n（介護のため）',
+        '介護休業をしていない労働者が申し出により利用できるフレックスタイム制',
+        '所定労働日ベースで合計20日間以上\n介護のために利用したことが確認できること'
+    ),
+    (
+        '介護サービス費用\n補助制度',
+        '対象家族の介護サービス費用の全部または一部を事業主が補助する制度',
+        '制度利用開始日から6か月以内に、労働者負担額の5割相当以上または10万円以上を補助すること'
+    ),
+]
+
+col_widths = [Cm(3.0), Cm(6.5), Cm(6.5)]
+for i, col_w in enumerate(col_widths):
+    for row in tbl_sys.rows:
+        row.cells[i].width = col_w
+
+for i, (name, content, req) in enumerate(sys_data):
+    row = tbl_sys.rows[i+1]
+    row.cells[0].text = name
+    row.cells[1].text = content
+    row.cells[2].text = req
+    for cell in row.cells:
+        for para in cell.paragraphs:
+            for run in para.runs:
+                run.font.size = Pt(9.5)
+    if i % 2 == 0:
+        for j in range(3):
+            set_cell_bg(row.cells[j], 'DEEAF1')
+
+doc.add_paragraph().paragraph_format.space_after = Pt(4)
+
+# 支給額表
+p_amt = doc.add_paragraph()
+r_amt = p_amt.add_run('■ 支給額')
+r_amt.bold = True
+r_amt.font.size = Pt(10.5)
+r_amt.font.color.rgb = RGBColor(0x2E, 0x74, 0xB5)
+p_amt.paragraph_format.space_before = Pt(4)
+p_amt.paragraph_format.space_after = Pt(2)
+
 tbl2 = doc.add_table(rows=3, cols=3)
 tbl2.style = 'Table Grid'
 h2_headers = ['導入制度数', '利用日数20日以上', '利用日数60日以上']
